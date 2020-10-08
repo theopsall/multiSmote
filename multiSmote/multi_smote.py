@@ -242,3 +242,13 @@ class multiSmote():
                     y = np.concatenate((y, y_new))
         del x_new, y_new, classes
         return X, y
+
+
+    def __str__(self):
+        """
+        str Method in order to change the printed message of the multilabel smote object
+
+        Returns:
+            message object.
+        """
+        return "Multi Label Smote Object. Default k is {0}".format(self.neighbors)
