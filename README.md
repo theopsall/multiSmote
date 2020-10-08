@@ -1,2 +1,4 @@
 # MultiSMOTE
-A multi label approach of the SMOTE algorithm
+A multi label approach for SMOTE algorithm
+
+![APM](https://img.shields.io/apm/l/vim-mode)
