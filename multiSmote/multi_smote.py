@@ -226,9 +226,9 @@ class MultiSmote():
         if not isinstance(x, pd.DataFrame) and not isinstance(x, np.ndarray):
             print("Not supported type of the data.\n"
                   " Aborting")
-            return None
+            return None, None
 
-        classes = get_classes(y)  # number ofclasses
+        classes = get_classes(y)  # number of classes
 
         for _ in range(classes - 1):  # minus one, we exclude the majority class.
             x_new, y_new = self.resample(x, y)
