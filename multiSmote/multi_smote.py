@@ -248,7 +248,7 @@ class MultiSmote():
 
     def __str__(self):
         """
-        str Method in order to change the printed message of the multilabel smote object
+        str Method in order to change the printed message of the multi-label smote object
 
         Returns:
             message object.
