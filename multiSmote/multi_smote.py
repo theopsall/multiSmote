@@ -1,42 +1,15 @@
 """
 Multi label Synthetic Minority Oversampling Technique Approach
 @author Theodoros Psallidas
+TODO: Maybe i have to run the oversampling technique for all the feature space.
 """
 import random
 import pandas as pd
 import numpy as np
 from sklearn.neighbors import NearestNeighbors
+from multiSmote.utils import get_classes, get_sum_classes
 
 
-def get_classes(y) -> int:
-    """
-    Get the total number of classes.
-
-    Args:
-        y : The labels list of the data.
-
-    Returns:
-        int: Number of total classes
-    """
-
-    return int(y.shape[1])
-
-
-def get_sum_classes(y) -> list:
-    """
-    Get the number of samples per class
-
-    Args:
-        y : Labels of the data
-
-    Returns:
-        list: [description]
-    """
-
-    if isinstance(y, pd.DataFrame):
-        return pd.DataFrame(y).sum().tolist()
-    if isinstance(y, np.ndarray):
-        return y.sum(axis=0)
 
 
 class MultiSmote():
@@ -248,7 +221,7 @@ class MultiSmote():
 
     def __str__(self):
         """
-        str Method in order to change the printed message of the multi-label smote object
+        str Method in order to change the printed message of the multilabel smote object
 
         Returns:
             message object.
